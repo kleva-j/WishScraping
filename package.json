@@ -1,0 +1,47 @@
+{
+  "name": "WishScraping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build && node ./dist/cluster.js",
+    "dev": "nodemon --exec babel-node ./server/cluster.js",
+    "build": "rm -rf dist && mkdir dist && babel -d ./dist ./server -s",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kleva-j/WishScraping.git"
+  },
+  "keywords": [
+    "Web scraping",
+    "Wish",
+    "Ecommerce",
+    "WishScraping"
+  ],
+  "author": "Michael Obasi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kleva-j/WishScraping/issues"
+  },
+  "homepage": "https://github.com/kleva-j/WishScraping#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cron": "^1.7.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "nodemon": "^2.0.2"
+  }
+}
